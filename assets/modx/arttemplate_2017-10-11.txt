@@ -1,0 +1,88 @@
+ Bearbeiten Bearbeiten 	Kopieren Kopieren 	Löschen Löschen 	ArtTemplate 	<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+ <head>
+
+   <title>[[*pagetitle]] - [[++site_name]]</title>
+   <base href="[[!++site_url]]" />
+   <meta charset="[[++modx_charset]]" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+   <!-- Included CSS Files -->
+   <link rel="stylesheet" href="[[++site_url]]assets/template/foundation-6.4.2-complete/css/foundation.css">
+   <link rel="stylesheet" href="[[++site_url]]assets/template/foundation-6.4.2-complete/css/app.css">
+ </head>
+
+ <body>
+
+<div class="app-dashboard shrink-medium">
+
+ <div class="grid-x app-dashboard-top-nav-bar">
+   <div class="cell medium-2">
+     <a>Artvento</a>
+[[-   <img src="[[++site_url]]assets/template/images/sivali_logo.jpg" alt="sivali logo" style="margin-left: 50px">  ]]
+   </div>
+   <div class="cell medium-2">
+     <button data-toggle="app-dashboard-sidebar" class="menu-icon hide-for-medium"></button>
+   </div>
+
+   <div class="cell shrink app-dashboard-top-bar-actions">
+     <div class="hover-underline-menu" data-menu-underline-from-center>
+       <ul class="menu">
+
+         [[!getResources? &parents=` ` &includeTVs=`1` &processTVs=`1` &sortby=`{"menuindex":"ASC"}` &tpl=`topNav_tpl`]]
+         
+       </ul>
+     </div>
+   </div>
+ </div>
+
+ <div class="app-dashboard-body off-canvas-wrapper">
+   <div id="app-dashboard-sidebar" class="app-dashboard-sidebar position-left off-canvas off-canvas-absolute reveal-for-medium" data-off-canvas>
+     <div class="app-dashboard-sidebar-title-area text-center">
+
+       <!-- Close button -->
+       <div class="app-dashboard-close-sidebar" title="Seitenmenü schließen">
+         <button id="close-sidebar" data-app-dashboard-toggle-shrink class="app-dashboard-sidebar-close-button show-for-medium" aria-label="Close menu" type="button">
+           <span class="show-for-sr">Seitenmenü schließen</span>&#9664;&#xFE0E;
+         </button>
+       </div>
+
+       <!-- Open button -->
+       <div class="app-dashboard-open-sidebar" title="Seitenmenü öffnen">
+         <button id="open-sidebar" data-app-dashboard-toggle-shrink class="app-dashboard-open-sidebar-button show-for-medium" aria-label="open menu" type="button">
+           <span class="show-for-sr">Seitenmenü öffnen</span>&#9654;&#xFE0E;
+         </button>
+       </div>
+     </div>
+     <div class="app-dashboard-sidebar-inner hover-underline-menu" data-menu-underline-from-center>
+       <ul class="menu vertical" data-magellan>
+
+[[- Modx comment out!!
+         <li><a href="[[~[[*id]]]]#Hero">
+          <span class="app-dashboard-sidebar-text"> [[*pagetitle]]</span>
+         </a></li>
+]]
+         [[getImageList?
+           &tvname=`SidebarOptions`
+           &where=`{"visible":"Yes"}`
+           &tpl=`sidebar_tpl`]]
+       </ul>
+
+     </div>
+   </div>
+
+   <div class="app-dashboard-body-content off-canvas-content sections" data-off-canvas-content>
+
+     [[*content]]
+
+   </div>
+ </div>
+</div>
+
+   <script src="[[++site_url]]assets/template/foundation-6.4.2-complete/js/vendor/jquery.js"></script>
+   <script src="[[++site_url]]assets/template/foundation-6.4.2-complete/js/vendor/what-input.js"></script>
+   <script src="[[++site_url]]assets/template/foundation-6.4.2-complete/js/vendor/foundation.js"></script>
+   <script src="[[++site_url]]assets/template/foundation-6.4.2-complete/js/app.js"></script>
+ </body>
+</html>
