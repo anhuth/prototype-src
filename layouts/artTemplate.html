@@ -1,0 +1,65 @@
+{{!-- This is a handlebar comment --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+
+  </head>
+  <body>
+
+    <div class="app-dashboard shrink-medium">
+      <div class="grid-x app-dashboard-top-nav-bar">
+        <div class="cell medium-2">
+          <a>Art Vento</a>
+        </div>
+        <div class="cell medium-2">
+          <button data-toggle="app-dashboard-sidebar" class="menu-icon hide-for-medium"></button>
+        </div>
+
+        <div class="cell shrink app-dashboard-top-bar-actions">
+          <div class="hover-underline-menu" data-menu-underline-from-center>
+            <ul class="menu">
+              {{#each pagenames.navpage}}
+                {{> topNav_tpl}}
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="app-dashboard-body off-canvas-wrapper">
+        <div id="app-dashboard-sidebar" class="app-dashboard-sidebar position-left off-canvas off-canvas-absolute reveal-for-medium" data-off-canvas>
+          <div class="app-dashboard-sidebar-title-area text-center">
+            <!-- Close button -->
+            <div class="app-dashboard-close-sidebar">
+              <button id="close-sidebar" data-app-dashboard-toggle-shrink class="app-dashboard-sidebar-close-button show-for-medium" aria-label="Close menu" type="button">
+                <span aria-hidden="true"><a href="#"><i class="large fa fa-angle-double-left"></i></a></span>
+              </button>
+            </div>
+            <!-- Open button -->
+            <div class="app-dashboard-open-sidebar">
+              <button id="open-sidebar" data-app-dashboard-toggle-shrink class="app-dashboard-open-sidebar-button show-for-medium" aria-label="open menu" type="button">
+                <span aria-hidden="true"><a href="#"><i class="large fa fa-angle-double-right"></i></a></span>
+              </button>
+            </div>
+          </div>
+          <div class="app-dashboard-sidebar-inner hover-underline-menu" data-menu-underline-from-center>
+            <ul class="menu vertical" data-magellan>
+              {{> sidebar_tpl}}
+            </ul>
+          </div>
+        </div>
+
+        <div class="app-dashboard-body-content off-canvas-content sections" data-off-canvas-content>
+          {{> body}}
+        </div>
+      </div>
+    </div>
+
+    <script src="{{root}}assets/js/app.js"></script>
+  </body>
+</html>

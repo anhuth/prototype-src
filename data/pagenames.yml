@@ -1,0 +1,7 @@
+navpage:
+  -
+    name: home
+    idx: 2
+  -
+    name: index
+    idx: 1
