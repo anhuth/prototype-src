@@ -12,25 +12,28 @@
       {{sidebar.entries.3.maintext}}
     </div>
 
-    <div class="cell bottomMargin small-12 {{sidebar.entries.3.imagecells}}">
+    <div class="cell bottomMargin grid-x align-spaced small-12 flex-child-grow large-1">
+      <div class="cell small-12 large-{{sidebar.entries.3.imagecells}}">
+
 <!--  cards  -->
-      <div class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-4">
-          {{#each products.product}}
-            <div class="cell call-thumb text-center" data-id="{{MIGX_id}}">
-              <div class="card card-select" data-cardSelect>
-                <div class="card-divider">
-                  {{title}}
+        <div class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-4">
+            {{#each products.product}}
+              <div class="cell call-thumb text-center" data-id="{{MIGX_id}}">
+                <div class="card card-select" data-cardSelect>
+                  <div class="card-divider">
+                    {{title}}
+                  </div>
+                  <img src="{{root}}assets/img/{{image}}" alt="{{title}}">
+                  <div class="card-section show-for-medium">
+                    {{description}}
+                  </div>
+                  <a data-open="revealKatalog"><button class="button" data-cardSelectButton>mehr...</button></a>
                 </div>
-                <img src="{{root}}assets/img/{{image}}" alt="{{title}}">
-                <div class="card-section show-for-medium">
-                  {{description}}
-                </div>
-                <a data-open="revealKatalog"><button class="button" data-cardSelectButton>mehr...</button></a>
               </div>
-            </div>
-          {{/each}}
-      </div>
+            {{/each}}
+        </div>
 <!--  end cards  -->
+      </div>
     </div>
   </div>
 </section>

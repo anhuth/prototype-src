@@ -1,27 +1,30 @@
-<section id="{{sidebar.entries.4.section}}" data-magellan-target="{{sidebar.entries.4.section}}">
+<section id="{{sidebar.entries.1.section}}" data-magellan-target="{{sidebar.entries.1.section}}">
   <div class="grid-x">
     <div class="small-12 cell">
       <hr>
-      <h3>{{sidebar.entries.4.section}}</h3><br/>
+      <h3>{{sidebar.entries.1.section}}</h3><br/>
     </div>
   </div>
 
-  <div class="grid-x  grid-margin-x {{sidebar.entries.4.textalign}}">
-    <div class="cell small-12 large-{{sidebar.entries.4.textcells}}">
-      {{sidebar.entries.4.maintext}}
+  <div class="grid-x  grid-margin-x {{sidebar.entries.1.textalign}}">
+    <div class="cell small-12 large-{{sidebar.entries.1.textcells}}">
+      {{sidebar.entries.1.maintext}}
     </div>
 
-    <div class="cell bottomMargin small-12 {{sidebar.entries.4.imagecells}}">
+    <div class="cell bottomMargin grid-x align-spaced small-12 flex-child-grow large-1">
+      <div class="cell small-12 large-{{sidebar.entries.1.imagecells}}">
+
 <!--  thumbnails  -->
-      <div class="grid-x thumbs">
-        {{#each products.product}}
-          <div class="cell call-thumb text-center" data-id="{{MIGX_id}}">
-            <a data-open="revealKollektion"><img src="{{root}}assets/img/{{image}}" alt="{{title}}" /></a>
-            <div class="expand-column-content">{{title}}</div>
-          </div>
-        {{/each}}
-      </div>
+        <div class="grid-x thumbs">
+          {{#each products.product}}
+            <div class="cell call-thumb text-center" data-id="{{MIGX_id}}">
+              <a data-open="revealKollektion"><img src="{{root}}assets/img/{{image}}" alt="{{title}}" /></a>
+              <div class="expand-column-content">{{title}}</div>
+            </div>
+          {{/each}}
+        </div>
 <!--  end thumbnails  -->
+      </div>
     </div>
   </div>
 </section>
