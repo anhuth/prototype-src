@@ -1,19 +1,6 @@
-<section id="{{sidebar.entries.1.section}}" data-magellan-target="{{sidebar.entries.1.section}}">
-  <div class="grid-x">
-    <div class="small-12 cell">
-      <hr>
-      <h3>{{sidebar.entries.1.section}}</h3><br/>
-    </div>
-  </div>
-
-  <div class="grid-x  grid-margin-x {{sidebar.entries.1.textalign}}">
-    <div class="cell small-12 large-{{sidebar.entries.1.textcells}}">
-      {{sidebar.entries.1.maintext}}
-    </div>
-
-    <div class="cell bottomMargin grid-x align-spaced small-12 flex-child-grow large-1">
-      <div class="cell small-12 large-{{sidebar.entries.1.imagecells}}">
-
+{{#with sidebar.entries.[1]}}
+  {{>upperPart}}
+{{/with}}
 <!--  thumbnails  -->
         <div class="grid-x thumbs">
           {{#each products.product}}

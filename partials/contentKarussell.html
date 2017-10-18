@@ -1,19 +1,6 @@
-<section id="{{sidebar.entries.2.section}}" data-magellan-target="{{sidebar.entries.2.section}}">
-  <div class="grid-x">
-    <div class="small-12 cell">
-      <hr>
-      <h3>{{sidebar.entries.2.section}}</h3><br/>
-    </div>
-  </div>
-
-  <div class="grid-x grid-margin-x {{sidebar.entries.2.textalign}}">
-    <div class="cell small-12 large-{{sidebar.entries.2.textcells}}">
-      {{sidebar.entries.2.maintext}}
-    </div>
-
-    <div class="cell bottomMargin grid-x align-spaced small-12 flex-child-grow large-1">
-      <div class="cell small-12 large-{{sidebar.entries.2.imagecells}}">
-
+{{#with sidebar.entries.[2]}}
+  {{>upperPart}}
+{{/with}}
         <div class="orbit" role="region" aria-label="Favorite Art Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
           <div class="orbit-wrapper">
             <div class="orbit-controls">

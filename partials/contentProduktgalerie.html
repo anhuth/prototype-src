@@ -1,20 +1,10 @@
-<section id="{{sidebar.entries.4.section}}" data-magellan-target="{{sidebar.entries.4.section}}">
-  <div class="grid-x">
-    <div class="small-12 cell">
-      <hr>
-      <h3>{{sidebar.entries.4.section}}</h3><br/>
-    </div>
-  </div>
-
-  <div class="grid-x grid-margin-x {{sidebar.entries.4.textalign}}">
-    <div class="cell small-12 large-{{sidebar.entries.4.textcells}}">
-      {{sidebar.entries.4.maintext}}
-    </div>
-
-    <div class="cell grid-x bottomMargin grid-x align-spaced small-12 flex-child-grow large-1">
-      <div class="cell small-12 large-{{sidebar.entries.4.imagecells}}">
-        <img id="main-product-image" data-actualid="0" src="{{root}}assets/img/{{products.product.0.image}}" alt="Erstes Bild">
-        <h4 id="main-product-title" class="text-center">{{products.product.0.title}}</h4>
+{{#with sidebar.entries.[4]}}
+  {{>upperPart}}
+{{/with}}
+{{#with products.product.[0]}}
+        <img id="main-product-image" data-actualid="0" src="{{root}}assets/img/{{image}}" alt="Erstes Bild">
+        <h4 id="main-product-title" class="text-center">{{title}}</h4>
+{{/with}}
 
         <ul class="menu align-center">
           {{#each products.product as |product i|}}
