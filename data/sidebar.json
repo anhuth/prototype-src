@@ -22,7 +22,7 @@
     { "section": "Baden",
       "maintext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus blandit ligula eget est feugiat viverra. Duis a arcu laoreet, rhoncus libero imperdiet, placerat velit. Vestibulum euismod mi et ornare sodales.",
       "textalign": "flex-dir-row-reverse",
-      "textcells": "4",
+      "textcells": "0",
       "imagecells": "12"
     },
     { "section": "Reiseländer",

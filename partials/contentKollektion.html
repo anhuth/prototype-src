@@ -2,16 +2,15 @@
   {{>upperPart}}
 {{/with}}
 <!--  thumbnails  -->
-        <div class="grid-x thumbs">
-          {{#each products.product}}
-            <div class="cell call-thumb text-center" data-id="{{MIGX_id}}">
-              <a data-open="revealKollektion"><img src="{{root}}assets/img/{{image}}" alt="{{title}}" /></a>
-              <div class="expand-column-content">{{title}}</div>
-            </div>
-          {{/each}}
-        </div>
-<!--  end thumbnails  -->
+      <div class="grid-x thumbs">
+        {{#each products.product}}
+          <div class="cell call-thumb text-center" data-id="{{MIGX_id}}">
+            <a data-open="revealKollektion"><img src="{{root}}assets/img/{{image}}" alt="{{title}}" /></a>
+            <div class="expand-column-content">{{title}}</div>
+          </div>
+        {{/each}}
       </div>
+<!--  end thumbnails  -->
     </div>
   </div>
 </section>

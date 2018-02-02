@@ -1,14 +1,13 @@
 {{#with sidebar.entries.[0]}}
   {{>upperPart}}
 {{/with}}
-        <div class="grid-x flex-child-grow small-up-2 medium-up-3 large-up-5 thumbs">
-          {{#each products.product}}
-            <div class="cell tile-thumb hoverscale" data-id="{{MIGX_id}}" style ="background-image: url('{{root}}assets/img/{{image}}');background-size: cover;">
-              <a data-open="revealTiles">
-              <h4 class="tile-text">{{title}}</h4></a>
-            </div>
-          {{/each}}
-        </div>
+      <div class="grid-x flex-child-grow small-up-2 medium-up-3 large-up-5 thumbs">
+        {{#each products.product}}
+          <div class="cell tile-thumb hoverscale" data-id="{{MIGX_id}}" style ="background-image: url('{{root}}assets/img/{{image}}');background-size: cover;">
+            <a data-open="revealTiles">
+            <h4 class="tile-text">{{title}}</h4></a>
+          </div>
+        {{/each}}
       </div>
     </div>
   </div>

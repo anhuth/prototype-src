@@ -2,24 +2,23 @@
   {{>upperPart}}
 {{/with}}
 <!--  cards  -->
-        <div class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-4">
-            {{#each products.product}}
-              <div class="cell call-thumb text-center" data-id="{{MIGX_id}}">
-                <div class="card card-select" data-cardSelect>
-                  <div class="card-divider">
-                    {{title}}
-                  </div>
-                  <img src="{{root}}assets/img/{{image}}" alt="{{title}}">
-                  <div class="card-section show-for-medium">
-                    {{description}}
-                  </div>
-                  <a data-open="revealKatalog"><button class="button" data-cardSelectButton>mehr...</button></a>
+      <div class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-4">
+          {{#each products.product}}
+            <div class="cell call-thumb text-center" data-id="{{MIGX_id}}">
+              <div class="card card-select" data-cardSelect>
+                <div class="card-divider">
+                  {{title}}
                 </div>
+                <img src="{{root}}assets/img/{{image}}" alt="{{title}}">
+                <div class="card-section show-for-medium">
+                  {{description}}
+                </div>
+                <a data-open="revealKatalog"><button class="button" data-cardSelectButton>mehr...</button></a>
               </div>
-            {{/each}}
-        </div>
-<!--  end cards  -->
+            </div>
+          {{/each}}
       </div>
+<!--  end cards  -->
     </div>
   </div>
 </section>

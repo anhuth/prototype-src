@@ -1,0 +1,17 @@
+{{#with sidebar.entries.[0]}}
+  {{>upperPart}}
+{{/with}}
+      <div class="grid-container full">
+        <div class="grid-x grid-padding-x">
+        {{#each products.product}}
+          <div class="cell medium-7 fixBackground" style="background:url('{{root}}assets/img/{{image}}'); background-size: cover; background-attachment: fixed;">
+          </div>
+          <div class="cell medium-5 band-text bgcolor-white-opaque">
+              {{description}}
+          </div>
+        {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
